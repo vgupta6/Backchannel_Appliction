@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  content: MyText
+  commentCount: 1
+  voteCount: 1
+  createdBy: MyString
+
+two:
+  title: MyString
+  content: MyText
+  commentCount: 1
+  voteCount: 1
+  createdBy: MyString

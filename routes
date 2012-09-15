@@ -1,0 +1,46 @@
+       vote_for_posts GET    /vote_for_posts(.:format)              vote_for_posts#index
+                      POST   /vote_for_posts(.:format)              vote_for_posts#create
+    new_vote_for_post GET    /vote_for_posts/new(.:format)          vote_for_posts#new
+   edit_vote_for_post GET    /vote_for_posts/:id/edit(.:format)     vote_for_posts#edit
+        vote_for_post GET    /vote_for_posts/:id(.:format)          vote_for_posts#show
+                      PUT    /vote_for_posts/:id(.:format)          vote_for_posts#update
+                      DELETE /vote_for_posts/:id(.:format)          vote_for_posts#destroy
+    vote_for_comments GET    /vote_for_comments(.:format)           vote_for_comments#index
+                      POST   /vote_for_comments(.:format)           vote_for_comments#create
+ new_vote_for_comment GET    /vote_for_comments/new(.:format)       vote_for_comments#new
+edit_vote_for_comment GET    /vote_for_comments/:id/edit(.:format)  vote_for_comments#edit
+     vote_for_comment GET    /vote_for_comments/:id(.:format)       vote_for_comments#show
+                      PUT    /vote_for_comments/:id(.:format)       vote_for_comments#update
+                      DELETE /vote_for_comments/:id(.:format)       vote_for_comments#destroy
+             comments GET    /comments(.:format)                    comments#index
+                      POST   /comments(.:format)                    comments#create
+          new_comment GET    /comments/new(.:format)                comments#new
+         edit_comment GET    /comments/:id/edit(.:format)           comments#edit
+              comment GET    /comments/:id(.:format)                comments#show
+                      PUT    /comments/:id(.:format)                comments#update
+                      DELETE /comments/:id(.:format)                comments#destroy
+                posts GET    /posts(.:format)                       posts#index
+                      POST   /posts(.:format)                       posts#create
+             new_post GET    /posts/new(.:format)                   posts#new
+            edit_post GET    /posts/:id/edit(.:format)              posts#edit
+                 post GET    /posts/:id(.:format)                   posts#show
+                      PUT    /posts/:id(.:format)                   posts#update
+                      DELETE /posts/:id(.:format)                   posts#destroy
+           categories GET    /categories(.:format)                  categories#index
+                      POST   /categories(.:format)                  categories#create
+         new_category GET    /categories/new(.:format)              categories#new
+        edit_category GET    /categories/:id/edit(.:format)         categories#edit
+             category GET    /categories/:id(.:format)              categories#show
+                      PUT    /categories/:id(.:format)              categories#update
+                      DELETE /categories/:id(.:format)              categories#destroy
+        user_accounts GET    /user_accounts(.:format)               user_accounts#index
+                      POST   /user_accounts(.:format)               user_accounts#create
+     new_user_account GET    /user_accounts/new(.:format)           user_accounts#new
+    edit_user_account GET    /user_accounts/:id/edit(.:format)      user_accounts#edit
+         user_account GET    /user_accounts/:id(.:format)           user_accounts#show
+                      PUT    /user_accounts/:id(.:format)           user_accounts#update
+                      DELETE /user_accounts/:id(.:format)           user_accounts#destroy
+                 root        /                                      home#index
+         admins_login        /admins/login(.:format)                admins#login
+         admins_index        /admins/index(.:format)                admins#index
+                             /:controller(/:action(/:id))(.:format) :controller#:action

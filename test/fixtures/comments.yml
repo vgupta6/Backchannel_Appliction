@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  content: MyText
+  commenter: MyString
+  voteCount: 1
+
+two:
+  content: MyText
+  commenter: MyString
+  voteCount: 1
