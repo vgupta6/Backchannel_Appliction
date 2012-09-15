@@ -1,0 +1,21 @@
+<h1>Listing vote_for_comments</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vote_for_comments.each do |vote_for_comment| %>
+  <tr>
+    <td><%= link_to 'Show', vote_for_comment %></td>
+    <td><%= link_to 'Edit', edit_vote_for_comment_path(vote_for_comment) %></td>
+    <td><%= link_to 'Destroy', vote_for_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vote for comment', new_vote_for_comment_path %>
