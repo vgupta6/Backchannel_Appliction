@@ -11,6 +11,8 @@ BackchannelApplication::Application.routes.draw do
 
   resources :user_accounts
 
+  #resources :login
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -61,6 +63,10 @@ BackchannelApplication::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
    root :to => 'home#index'
+   match "admins/login", :to => 'admins#login'
+  match "admins/index", :to => 'admins#index'
+
+  #match "signup", :to => "users#new"
 
   # See how all your routes lay out with "rake routes"
 

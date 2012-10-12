@@ -2,11 +2,13 @@ require 'digest/sha1'
 
 class UserAccount < ActiveRecord::Base
 
+  #acts_as_authentic
+
   EMAIL_REGEX = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i
   attr_accessible :address, :dateOfBirth, :email, :encrypted_password, :gender, :interests, :name, :phNum, :professionalStatus, :userName
 
-  #has_many :comment, :dependent => :destroy
-  #has_many :post, :dependent => :destroy
+  has_many :comments, :dependent => :destroy
+  has_many :posts, :dependent => :destroy
 
   validates_presence_of :address, :dateOfBirth, :email, :encrypted_password, :gender, :name, :phNum, :userName
   validates_length_of :userName, :within => 6..25

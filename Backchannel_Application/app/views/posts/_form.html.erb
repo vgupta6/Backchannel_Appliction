@@ -27,6 +27,10 @@
     <%= f.label :voteCount %><br />
     <%= f.number_field :voteCount %>
   </div>
+
+  <%= f.label :category %>
+  <%= select("post", "category_id", Category.find(:all).collect{ |c| [ c.name, c.id] }) %>
+
   <div class="field">
     <%= f.label :createdBy %><br />
     <%= f.text_field :createdBy %>

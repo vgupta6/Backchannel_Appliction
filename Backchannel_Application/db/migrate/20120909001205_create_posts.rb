@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration
       t.integer :commentCount
       t.integer :voteCount
       t.string :createdBy
+      t.string :category_id
 
       t.timestamps
     end

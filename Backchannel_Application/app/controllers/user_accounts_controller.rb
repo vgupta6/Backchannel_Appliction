@@ -6,6 +6,8 @@ class UserAccountsController < ApplicationController
 
   #http_basic_authenticate_with :authenticate :except => [:index, :show]
 
+  before_filter :save_login_state, :only => [:new, :create]
+
   def index
     @user_accounts = UserAccount.all
 
